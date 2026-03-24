@@ -3,35 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Safa Pro Audio & Events</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00ffd5">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#0f2027;color:#fff;}
 header{background:linear-gradient(to right,#141E30,#243B55,#1CB5E0);padding:20px;text-align:center;}
-header h1{color:#00ffd5;font-size:40px;font-weight:700;letter-spacing:2px;font-family:'Cinzel',serif;}
+header h1{color:#00ffd5;font-size:40px;font-family:'Cinzel',serif;}
 nav{display:flex;justify-content:center;gap:20px;margin-top:10px;}
-nav a{color:#fff;text-decoration:none;font-weight:500;}
-.hero{height:80vh;background:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;}
-.hero h2{font-size:48px;background:rgba(0,0,0,0.6);padding:20px;border-radius:10px;}
+nav a{color:#fff;text-decoration:none;}
+.hero{height:80vh;background:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622') center/cover;display:flex;align-items:center;justify-content:center;}
+.hero h2{background:rgba(0,0,0,0.6);padding:20px;border-radius:10px;}
 .section{padding:60px 20px;text-align:center;}
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px;}
-.card{background:#203a43;padding:20px;border-radius:20px;transition:0.4s;box-shadow:0 10px 30px rgba(0,0,0,0.3);}
-.card:hover{transform:scale(1.05);}
+.card{background:#203a43;padding:20px;border-radius:20px;}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:30px;}
-.gallery img{width:100%;height:250px;object-fit:cover;border-radius:15px;cursor:pointer;transition:0.4s;}
-.gallery img:hover{transform:scale(1.08);}
-.cta{background:#00ffd5;color:#000;padding:20px;margin-top:40px;border-radius:10px;}
+.gallery img{width:100%;height:250px;object-fit:cover;border-radius:15px;}
 footer{background:#203a43;padding:20px;text-align:center;margin-top:40px;}
-button{padding:10px 20px;border:none;background:#00ffd5;color:#000;font-weight:bold;border-radius:5px;cursor:pointer;}
+button{padding:10px 20px;background:#00ffd5;color:#000;border:none;border-radius:5px;cursor:pointer;margin-top:10px;}
 </style>
 </head>
+
 <body>
 
 <header>
 <h1>Safa Pro Audio & Events</h1>
-<p style="margin-top:10px;font-family:'Playfair Display',serif;font-size:22px;letter-spacing:2px;">Premium Event Management | Calicut, Kerala</p>
-<p style="margin-top:5px;font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:#ffd700;">Turning Ideas Into Moments</p>
+<p>Premium Event Management | Calicut, Kerala</p>
+
+<!-- INSTALL BUTTON -->
+<button id="installBtn" style="display:none;">⬇ Install App</button>
+
 <nav>
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -46,17 +54,11 @@ button{padding:10px 20px;border:none;background:#00ffd5;color:#000;font-weight:b
 
 <section class="section" id="about">
 <h2>About Us</h2>
-<p style="font-family:'Playfair Display',serif;font-size:20px;color:#ffd700;margin-bottom:15px;">
-Delivering unforgettable events with over 25 years of excellence and expertise.
-</p>
-<p>
-We are a professional event production company based in Calicut, Kerala. We specialize in weddings, stage events, lighting, sound, and complete event solutions with in-house production capabilities.
-</p>
+<p>Delivering unforgettable events with over 25 years of excellence.</p>
 </section>
 
 <section class="section" id="services">
-<h2 style="font-family:'Playfair Display',serif;font-size:34px;letter-spacing:2px;">Our Services</h2>
-
+<h2>Our Services</h2>
 <div class="services">
 <div class="card">Wedding Stage Design</div>
 <div class="card">Lighting & Sound Setup</div>
@@ -68,69 +70,60 @@ We are a professional event production company based in Calicut, Kerala. We spec
 <section class="section" id="gallery">
 <h2>Our Work</h2>
 <div class="gallery">
-<img src="image1.jpg" alt="Event 1">
-<img src="image2.jpg" alt="Event 2">
-<img src="image3.jpg" alt="Event 3">
+<img src="image1.jpg">
+<img src="image2.jpg">
+<img src="image3.jpg">
 </div>
 </section>
 
 <section class="section" id="contact">
 <h2>Contact Us</h2>
-<p id="contactDetails">
-📍 Kattangal, Near NIT, Calicut<br>
-📞 Phone: 9388849675<br>
-💬 WhatsApp: <a href="https://wa.me/919388849675" target="_blank" style="color:#00ffd5;">Chat Now</a><br>
-📸 Instagram: <a href="https://instagram.com/safaproaudioandevents" target="_blank" style="color:#00ffd5;">@safaproaudioandevents</a>
+<p>
+📞 9388849675<br>
+💬 <a href="https://wa.me/919388849675" style="color:#00ffd5;">WhatsApp</a><br>
+📸 <a href="https://instagram.com/safaproaudioandevents" style="color:#00ffd5;">Instagram</a>
 </p>
-
-<div class="cta">
-<h3>Book Your Event Now</h3>
-<p>Contact us today to make your event unforgettable!</p>
-</div>
 </section>
 
-<!-- Instagram Floating Button -->
-<section style="position:fixed;bottom:90px;right:20px;">
+<!-- Floating Instagram -->
+<div style="position:fixed;bottom:90px;right:20px;">
 <a href="https://instagram.com/safaproaudioandevents" target="_blank">
-<button style="background:#E1306C;color:white;border-radius:50px;padding:15px 20px;font-size:16px;">
-📸 Instagram
-</button>
+<button style="background:#E1306C;color:white;border-radius:50px;">📸</button>
 </a>
-</section>
+</div>
 
-<!-- WhatsApp Floating Button -->
-<section style="position:fixed;bottom:20px;right:20px;">
+<!-- Floating WhatsApp -->
+<div style="position:fixed;bottom:20px;right:20px;">
 <a href="https://wa.me/919388849675" target="_blank">
-<button style="background:#25D366;color:white;border-radius:50px;padding:15px 20px;font-size:16px;">
-💬 WhatsApp
-</button>
+<button style="background:#25D366;color:white;border-radius:50px;">💬</button>
 </a>
-</section>
+</div>
 
 <footer>
-<p>© 2026 Safa Pro Audio & Events | All Rights Reserved</p>
+<p>© 2026 Safa Pro Audio & Events</p>
 </footer>
 
-<!-- Lightbox -->
-<div id="lightbox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);justify-content:center;align-items:center;z-index:1000;">
-<img id="lightbox-img" style="max-width:90%;max-height:90%;border-radius:10px;">
-</div>
-
 <script>
-const images = document.querySelectorAll('.gallery img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+// INSTALL BUTTON
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'block';
 });
 
-lightbox.addEventListener('click', () => {
-  lightbox.style.display = 'none';
+installBtn.addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+  }
 });
+
+// SERVICE WORKER REGISTER
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
 </script>
 
 </body>
